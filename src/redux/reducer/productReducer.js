@@ -1,16 +1,19 @@
 import { GET_CONTENT } from "../actionTypes/actionTypes";
 
 export const initialState ={
- TEST : "TEST"
+ products : [],
 };
 
 export const productReducer =(state = initialState, action)=>{
-    console.log(state);
+    
     switch(action.type){
+        
      case GET_CONTENT :
         return {
-            ...state
+            ...state,
+            products : action.payload
         }
+
         default :
           return state;
     }
