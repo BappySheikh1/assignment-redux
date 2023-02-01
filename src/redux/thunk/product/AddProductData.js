@@ -2,7 +2,7 @@ import { addContent } from "../../actions/productActions"
 
 export const AddProductData =(product)=>{
     return async (dispatch,getState)=>{
-       const res = await fetch(`http://localhost:5000/product`,{
+       const res = await fetch(`https://moon-tech-server-ruddy.vercel.app/product`,{
         method : "POST",
         headers :{
             "Content-type" : "application/json"

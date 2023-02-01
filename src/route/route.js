@@ -18,7 +18,7 @@ export const router=createBrowserRouter([
            },
            {
             path:'/home/:id',
-            loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`),
+            loader: ({params})=> fetch(`https://moon-tech-server-ruddy.vercel.app/products/${params.id}`),
             element : <DetailsPage />
            }
          ]
@@ -37,7 +37,7 @@ export const router=createBrowserRouter([
           },
           {
             path: "update/:id",
-            loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`),
+            loader: ({params})=> fetch(`https://moon-tech-server-ruddy.vercel.app/products/${params.id}`),
             element: <UpdateProduct />,
           },
         ],
