@@ -10,7 +10,7 @@ const Home = () => {
  const products = useSelector((state)=> state.products)
 
     
-// console.log(products);
+/
     useEffect(()=>{
        dispatch(loadProductData())
     },[dispatch])

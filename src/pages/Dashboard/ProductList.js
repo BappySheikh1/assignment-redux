@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useDispatch,useSelector} from 'react-redux'
 import { deleteProductData } from '../../redux/thunk/product/deleteProductData';
 import {RxUpdate} from 'react-icons/rx'
+import loadProductData from '../../redux/thunk/product/fetchProductData';
 
-const ProductList = () => {
+const ProductList = () => { 
 
     const dispatch =useDispatch()
     const products = useSelector((state) => state.products)
-
+    
+     useEffect(()=>{
+      dispatch(loadProductData())
+     },[dispatch])
     return (
         <div className='flex flex-col justify-center items-center h-full w-full '>
         <div className='w-full max-w-7xl mx-auto rounded-lg  bg-white shadow-lg border border-gray-200'>

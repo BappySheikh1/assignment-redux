@@ -6,7 +6,7 @@ export const deleteProductData =(_id)=>{
             method : 'DELETE',
             headers: {
                 "Content-type" : 'application/json'
-            }
+            } 
         })
         const data =await res.json()
 

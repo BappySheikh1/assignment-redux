@@ -12,7 +12,7 @@ export const productReducer =(state = initialState, action)=>{
         return {
             ...state,
             products : action.payload
-        }
+        } 
 
      case ADD_CONTENT : 
         return {

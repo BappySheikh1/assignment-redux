@@ -35,7 +35,7 @@ const AddProduct = () => {
           ],
           spec: [],
         };
-   
+         form.reset()
       dispatch(AddProductData(product))
     } 
 

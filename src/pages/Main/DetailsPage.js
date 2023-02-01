@@ -1,11 +1,36 @@
 import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const DetailsPage = () => {
+    const product =useLoaderData()
+    // console.log(product);
     return (
-        <div>
-            <h1>Details Page component</h1>
+        <div
+        className='shadow-lg rounded-3xl border  p-3 flex flex-col text-indigo-900'
+        key={product._id}
+      >
+        <div className='h-52 w-52 mx-auto'>
+          <img src={product.image} alt={product.model} />
         </div>
-    );
+        <h1 className='font-bold text-center'>{product.model}</h1>
+        <p className='text-center font-semibold mb-3'>Rating: {product.rating}</p>
+        <div className=' flex-1'>
+          <ul className='space-y-2'>
+            {product.keyFeature.map((feature,i) => {
+              return <li className='text-sm ' key={i}>{feature}</li>;
+            })}
+          </ul>
+        </div>
+        <div className='flex gap-2 mt-5'>
+          <Link to='/'>
+          <button className='bg-indigo-500 rounded-full py-1 px-2 flex-1 text-white text-bold'>
+            Back to home
+          </button>
+          </Link>
+         
+        </div>
+      </div>
+    ); 
 };
 
 export default DetailsPage;

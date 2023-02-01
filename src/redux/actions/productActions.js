@@ -6,7 +6,7 @@ export const getContent =(product)=>{
         payload : product
     }
 } 
-
+ 
 export const addContent =(product)=>{
     return {
         type : ADD_CONTENT,
