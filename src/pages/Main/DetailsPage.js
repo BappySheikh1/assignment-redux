@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const DetailsPage = () => {
     const product =useLoaderData()
-    // console.log(product);
+    
     return (
         <div
         className='shadow-lg rounded-3xl border  p-3 flex flex-col text-indigo-900'

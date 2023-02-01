@@ -3,6 +3,7 @@ import {useDispatch,useSelector} from 'react-redux'
 import { deleteProductData } from '../../redux/thunk/product/deleteProductData';
 import {RxUpdate} from 'react-icons/rx'
 import loadProductData from '../../redux/thunk/product/fetchProductData';
+import { Link } from 'react-router-dom';
 
 const ProductList = () => { 
 
@@ -93,11 +94,11 @@ const ProductList = () => {
                     </td>
                     <td className='p-2'>
                       <div className='flex justify-center'>
-
+                         <Link to={`update/${_id}`}>
                         <button >
                           <RxUpdate className='text-2xl'/>
                         </button>
-                        
+                        </Link>
                       </div>
                     </td>
                   </tr>

@@ -11,8 +11,10 @@ export const updateProductData =(_id)=>{
       })
       const data =await res.json()
 
-     if(data){
+      if(data.modifiedCount > 0){
+        // toast.success('User Update successful',{autoClose: 500})
         dispatch(updateContent(_id))
-     }
+    }
+     
     }
 }
